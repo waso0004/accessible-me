@@ -14,10 +14,12 @@
 
 <body itemscope itemtype="https://schema.org/LocalBusiness">
   <header role="banner">
-    <div class="container">
+    <div class="container" role="region" aria-label="Header Container">
       <div class="site-header">
-        <h1 itemprop="name" role="heading"><a href="#jam">Jam Box Studios</a></h1>
-        <nav class="main-nav" role="navigation">
+        <!-- Main site heading -->
+        <h1 itemprop="name" role="heading" aria-level="1"><a href="#jam">Jam Box Studios</a></h1>
+        <!-- Navigation bar -->
+        <nav class="main-nav" role="navigation" aria-label="Main Navigation">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -25,20 +27,24 @@
             <li><a href="#address">Address</a></li>
           </ul>
         </nav>
+        <!-- Banner -->
         <img src="https://picsum.photos/1200/900" alt="Random Pictures" class="banner" itemprop="image">
       </div>
     </div>
   </header>
 
   <main role="main">
-    <div class="container">
-      <div class="main-content" id="jam">
+    <div class="container" role="region" aria-label="Main Content Container">
+      <div class="main-content" id="jam" role="region" aria-label="Jam Box Information">
+        <!--welcome-->
         <h2>Welcome to Jam Box</h2>
-        <article role="article">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+        <!-- Article -->
+        <article role="article" aria-label="Introductory Text">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
         </article>
-        <div class="owner" id="about" itemscope itemtype="https://schema.org/Person">
+        <!-- Info section -->
+        <aside class="owner" id="about" itemscope itemtype="https://schema.org/Person" role="complementary" aria-label="Owner Information">
           <h3>Meet the owner</h3>
           <ul>
             <li>Name: <span itemprop="name">John Doe</span></li>
@@ -47,45 +53,48 @@
             <li>Phone: <span itemprop="telephone">613-000-0000</span></li>
           </ul>
           <h3>Address</h3>
-          <p id="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <div id="address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" role="region" aria-label="Physical Address">
             Jambox Studios<br>
             <span itemprop="streetAddress">123 Guitar Road</span>,<br>
             <span itemprop="addressLocality">Musicville</span>,
             <span itemprop="addressRegion">Danceistan</span><br>
             <span itemprop="postalCode">B3T 0L0</span>
-          </p>
-        </div>
-        <div class="contact-section" id="contact">
+          </div>
+        </aside>
+        <!-- Contact section -->
+        <div class="contact-section" id="contact" role="region" aria-label="Contact Section">
           <h3>Contact Us</h3>
-          <form action="thanks.html" role="form">
+          <form action="thanks.html" role="form" aria-label="Contact Form">
             <div>
-                <label for="fname">Full Name</label><br>
-                <input type="text" name="fname" id="fname">
+              <label for="fname">Full Name</label><br>
+              <input type="text" name="fname" id="fname">
             </div>
             <div>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email">
+              <label for="email">Email</label><br>
+              <input type="email" name="email" id="email">
             </div>
             <div>
               <label for="subject">Subject</label><br>
               <input type="text" name="subject" id="subject">
             </div>
+            <!--Message input -->
             <h3>Your Message</h3>
             <div>
-                <label for="message">Message</label><br>
-                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+              <label for="message">Message</label><br>
+              <textarea name="message" id="message" cols="20" rows="10"></textarea>
             </div>
             <div>
               <button type="submit" aria-label="Submit the message">Send</button>
             </div>
-        </form>
+          </form>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer role="contentinfo">
-    <div class="container">
+    <div class="container" role="region" aria-label="Footer Container">
       <div class="site-footer">
         &copy; 2021 Jam Box Studios
       </div>
